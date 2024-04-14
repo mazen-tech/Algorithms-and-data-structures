@@ -16,14 +16,40 @@ public class TStack<E> {
             throw new IllegalStateException("Stack is empty");
         }
         return stack.remove(stack.size() - 1);
+        /*public E remove (int ind){
+        if (ind < 0 || ind >= stack.size()) {
+            throw new IndexOutOfBoundsException("Index: " + ind + ", Size: " + stack.size());
+            }
+            E removedItem = stack.get(ind);
+
+            for (int i = ind; i < stck.size() - 1; i++) {
+                stack.set(i, stack.get(i + 1));
+            }
+
+            stack.remove(stack.size() - 1);
+            return removeItem;
+        }*/
     }
 
     public boolean isEmpty() {
         return stack.isEmpty();
+        /*public boolean isEmpty(){
+        return stack.size() == 0;
+        }*/
     }
 
     public int size() {
         return stack.size();
+
+        /*public int size()
+            {
+            int count = 0;
+            for(E item : stack){
+                count++;
+            }
+            return count;
+            }
+            */
     }
 
     public int deepLevel(E item){
